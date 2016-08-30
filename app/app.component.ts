@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ContactService, ContactsComponent } from './contact/index';
+// import { ContactService, ContactsComponent } from './contact';
+import { ContactService } from './contact/index';
 @Component({
     selector: 'whatsapp',
-    template: '<app-contacts></app-contacts>',
-    directives:[ContactsComponent],
+    template: '<router-outlet></router-outlet>',
     providers:[ContactService]
 })
 export class AppComponent { }
