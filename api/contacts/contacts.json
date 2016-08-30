@@ -1,0 +1,27 @@
+[
+    {
+        "contactId": 1,
+        "contactName": "contact 1",
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+        "contactId": 2,
+        "contactName": "contact 2",
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+    },
+    {
+        "contactId": 2,
+        "contactName": "contact 3",
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+    },
+    {
+        "contactId": 3,
+        "contactName": "contact 4",
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
+    },
+    {
+        "contactId": 4,
+        "contactName": "contact 5",
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+    }
+]
