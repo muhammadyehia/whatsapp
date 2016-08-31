@@ -4,7 +4,7 @@
         "contactName": "contact 1",
         "LastMessage":{
             "contactName":"contact 1",
-            "Message":"aaaaa"
+            "Message":"Setting a global property on the window object Setting a global property on the window object Setting a global property on the window object"
         },
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
     },
@@ -18,7 +18,7 @@
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
     },
     {
-        "contactId": 2,
+        "contactId":3,
         "contactName": "contact 3",
          "LastMessage":{
             "contactName":"contact 3",
@@ -27,7 +27,7 @@
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
     },
     {
-        "contactId": 3,
+        "contactId": 4,
         "contactName": "contact 4",
            "LastMessage":{
             "contactName":"contact 4",
@@ -36,7 +36,7 @@
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
     },
     {
-        "contactId": 4,
+        "contactId": 5,
         "contactName": "contact 5",
              "LastMessage":{
             "contactName":"contact 5",

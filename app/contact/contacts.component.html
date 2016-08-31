@@ -1,5 +1,8 @@
-<ul>
-  <li *ngFor="let c of Contacts">
+<div class="container contacts-container"  >
+  
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let c of Contacts">
     <app-contact [Contact]="c"></app-contact>
   </li>
 </ul>
+</div>

@@ -6,12 +6,13 @@ import { IContact} from './contact'
     moduleId: module.id,
     selector: 'app-contacts',
     templateUrl: 'contacts.component.html',
-    directives:[ContactComponent]
+    directives:[ContactComponent],
+    styleUrls:['contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
 
 constructor(private _contactService:ContactService ) { }
-  Contacts:IContact[]
+  Contacts:IContact[];
     ngOnInit() { 
 		this._contactService.getContacts_RxObservable()
             .subscribe((contacts: IContact[]) => {

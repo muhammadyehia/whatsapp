@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { IContact} from './contact'
-const URL_CONTACT = 'api/contacts/contactsWithLastMessage.json';
+import { IContact,IContactWithMessages} from './contact'
+const URL_CONTACTSWITHLASTMESSAGE = 'api/contacts/contactsWithLastMessage.json';
+const URL_CONTACTSWITHMESSAGES = 'api/contacts/contactsWithMessages.json';
 @Injectable()
 export class ContactService {
     
@@ -11,7 +12,7 @@ export class ContactService {
 
  
   getContacts() :Promise<IContact[]> {
-    return this._http.get(URL_CONTACT)
+    return this._http.get(URL_CONTACTSWITHLASTMESSAGE)
       .map((response: Response) => <IContact[]> response.json())
       .toPromise()
       .catch((err: any) => {
@@ -19,9 +20,14 @@ export class ContactService {
         return Promise.reject(err);
       });
   }
-
+getContactMessages_RxObservable(id:number): Observable<IContactWithMessages>
+{
+   return this._http.get(URL_CONTACTSWITHMESSAGES)
+      .map((response: Response) => (<IContactWithMessages[]> response.json()).filter((value:IContactWithMessages)=>{ return value.contactId==id;})[0])
+      .catch(this._handlerError);
+}
   getContacts_RxObservable(): Observable<IContact[]> {
-    return this._http.get(URL_CONTACT)
+    return this._http.get(URL_CONTACTSWITHLASTMESSAGE)
       .map((response: Response) => <IContact[]> response.json())
       .catch(this._handlerError);
   }

@@ -1,0 +1,23 @@
+.contact-img{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: solid 1px #999; 
+    border-radius: 25px;
+    vertical-align: top;
+    
+}
+.contact-name{
+    font-weight: bold ;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+}
+.contact-message{
+font-style: italic;
+color: #333;
+padding-top: 0px;
+margin-top: 0px;
+padding-left: 20px;
+}
+
