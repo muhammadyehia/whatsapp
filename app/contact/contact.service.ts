@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { IContact} from './contact'
-const URL_CONTACT = 'api/contacts/contacts.json';
+const URL_CONTACT = 'api/contacts/contactsWithLastMessage.json';
 @Injectable()
 export class ContactService {
     

@@ -1,4 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IContact } from './contact'
 @Component({
     moduleId: module.id,
@@ -6,10 +7,14 @@ import { IContact } from './contact'
     templateUrl: 'contact.component.html'
 })
 export class ContactComponent implements OnInit {
-    constructor() { }
+    constructor( private router: Router) { }
     @Input() Contact: IContact;
     ngOnInit() { 
 
+    }
+    onClick(){
+          let link = ['chat',this.Contact.contactId];
+          this.router.navigate(link);
     }
 
 }
