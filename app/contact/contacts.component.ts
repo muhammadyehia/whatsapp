@@ -14,10 +14,13 @@ export class ContactsComponent implements OnInit {
 constructor(private _contactService:ContactService ) { }
   Contacts:IContact[];
     ngOnInit() { 
+        if(!this._contactService.Contacts)
+        {
 		this._contactService.getContacts_RxObservable()
             .subscribe((contacts: IContact[]) => {
                 this.Contacts=contacts;
         }  ,(err) => {console.log(err);});
+        }
     }
 
 }

@@ -1,122 +1,112 @@
 [
     {
         "contactId": 1,
-        "contactName": "contact 1",
-        "Messages":[{
-            "contactName":"contact 1",
-            "Message":"aaaaa1"
+        "messages":[{
+            "contactId":1,
+            "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
         },
         {
-            "contactName":"contact 1",
-            "Message":"aaaaa2"
+            "contactId":1,
+            "message":"aaaaa2"
         },{
-            "contactName":"contact 1",
-            "Message":"aaaaa3"
+            "contactId":1,
+            "message":"aaaaa3"
         },
         {
-            "contactName":"Me",
-            "Message":"meeee1"
+            "contactId":0,
+            "message":"meeee1    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
         },
         {
-            "contactName":"me",
-            "Message":"meeee2"
-        }],
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-    },
-    {
+            "contactId":0,
+            "message":"meeee2"
+        }]
+    },  
+      {
         "contactId": 2,
-        "contactName": "contact 2",
-         "Messages":[{
-            "contactName":"contact 2",
-            "Message":"bbbbbbb1"
+        "messages":[{
+            "contactId":2,
+            "message":"bbbbbbb1"
         },
         {
-            "contactName":"contact 2",
-            "Message":"bbbbb2"
+            "contactId":2,
+            "message":"bbbbbbb2"
         },{
-            "contactName":"contact 2",
-            "Message":"bbbbb3"
+            "contactId":2,
+            "message":"bbbbbbb3"
         },
         {
-            "contactName":"Me",
-            "Message":"meeee1"
+            "contactId":0,
+            "message":"meeee1"
         },
         {
-            "contactName":"me",
-            "Message":"meeee2"
-        }],
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-    },
-    {
+            "contactId":0,
+            "message":"meeee2"
+        }]
+    },  
+      {
         "contactId": 3,
-        "contactName": "contact 3",
-         "Messages":[{
-            "contactName":"contact 3",
-            "Message":"cccccccc1"
+        "messages":[{
+            "contactId":3,
+            "message":"ccccccc1"
         },
         {
-            "contactName":"contact 3",
-            "Message":"cccccccc2"
+            "contactId":3,
+            "message":"ccccccc2"
         },{
-            "contactName":"contact 2",
-            "Message":"cccccccc3"
+            "contactId":3,
+            "message":"ccccccc3"
         },
         {
-            "contactName":"Me",
-            "Message":"meeee1"
+            "contactId":0,
+            "message":"meeee1"
         },
         {
-            "contactName":"me",
-            "Message":"meeee2"
-        }],
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-    },
-    {
+            "contactId":0,
+            "message":"meeee2"
+        }]
+    },  
+      {
         "contactId": 4,
-        "contactName": "contact 4",
-           "Messages":[{
-            "contactName":"contact 4",
-            "Message":"dddddddd1"
+        "messages":[{
+            "contactId":4,
+            "message":"dddddddd1"
         },
         {
-            "contactName":"contact 4",
-            "Message":"dddddddd2"
+            "contactId":4,
+            "message":"dddddddd2"
         },{
-            "contactName":"contact 4",
-            "Message":"dddddddd3"
+            "contactId":4,
+            "message":"dddddddd3"
         },
         {
-            "contactName":"Me",
-            "Message":"meeee1"
+            "contactId":0,
+            "message":"meeee1"
         },
         {
-            "contactName":"me",
-            "Message":"meeee2"
-        }],
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
-    },
-    {
+            "contactId":0,
+            "message":"meeee2"
+        }]
+    },  
+      {
         "contactId": 5,
-        "contactName": "contact 5",
-             "Messages":[{
-            "contactName":"contact 5",
-            "Message":"eeeeeeeee1"
+        "messages":[{
+            "contactId":5,
+            "message":"eeeeeeeeeee1"
         },
         {
-            "contactName":"contact 4",
-            "Message":"eeeeeeeee2"
+            "contactId":5,
+            "message":"eeeeeeeeeee2"
         },{
-            "contactName":"contact 4",
-            "Message":"eeeeeeeee3"
+            "contactId":5,
+            "message":"eeeeeeeeeee3"
         },
         {
-            "contactName":"Me",
-            "Message":"meeee1"
+            "contactId":0,
+            "message":"meeee1"
         },
         {
-            "contactName":"me",
-            "Message":"meeee2"
-        }],
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+            "contactId":0,
+            "message":"meeee2"
+        }]
     }
 ]

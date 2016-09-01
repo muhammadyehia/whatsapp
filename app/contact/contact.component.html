@@ -5,7 +5,7 @@
 
     <div style="display:inline-block">
         <h4 class="contact-name" > {{Contact.contactName | truncate: 35}}</h4>
-        <span  [title]='Contact.LastMessage.Message' class="contact-message">{{Contact.LastMessage.Message | truncate: 70}}</span>
+        <span  [title]='Contact.lastMessage' class="contact-message">{{Contact.lastMessage | truncate: 70}}</span>
     </div>
 
 </div>

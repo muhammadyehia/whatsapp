@@ -1,17 +1,17 @@
 export interface IMessage{
-    contactName:string,
-    Message:string
+    contactId:number;
+    message:string;
+    contactName?:string;
+    imageUrl?: string;
 } 
 
 export interface IContact {
     contactId: number;
-    contactName: string,
-    LastMessage:IMessage,
-    imageUrl: string
+    contactName: string;
+    lastMessage:string;
+    imageUrl: string;
 }
 export interface IContactWithMessages {
     contactId: number;
-    contactName: string,
-    Messages:IMessage[],
-    imageUrl: string
+    messages:IMessage[];
 }
