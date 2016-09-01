@@ -27,6 +27,8 @@ getContactMessages_RxObservable(id:number): Observable<IContactWithMessages>
       .catch(this._handlerError);
 }
   getContacts_RxObservable(): Observable<IContact[]> {
+
+    
     return this._http.get(URL_CONTACTSWITHLASTMESSAGE)
       .map((response: Response) => {this.Contacts= <IContact[]> response.json(); return this.Contacts;})
       .catch(this._handlerError);

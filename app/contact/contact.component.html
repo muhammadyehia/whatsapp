@@ -1,11 +1,17 @@
 <div (click)='onClick()'>
-    <!--<img [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [src]='product.imageUrl' [title]='product.productName' *ngIf='showImage' > -->
 
-    <img class="contact-img" [src]='Contact.imageUrl' [title]='Contact.contactName'>
+    <span class="chat-img pull-left">
+        <img [src]='Contact.imageUrl' [title]='Contact.contactName' [alt]="Contact.contactName" class="img-circle">
+    </span>
 
-    <div style="display:inline-block">
-        <h4 class="contact-name" > {{Contact.contactName | truncate: 35}}</h4>
-        <span  [title]='Contact.lastMessage' class="contact-message">{{Contact.lastMessage | truncate: 70}}</span>
+    <div class="chat-body clearfix">
+        <div class="header">
+            <strong class="primary-font"> {{Contact.contactName | truncate: 35}}</strong>
+        </div>
+        <p class="header-msg">
+             {{Contact.lastMessage | truncate: 70}}
+        </p>
     </div>
+
 
 </div>
