@@ -1,0 +1,77 @@
+.contacts-container
+{
+  margin-top:7%;
+
+}
+.contacts-container .list-group-item
+{
+    cursor: pointer;
+    
+}
+.contacts-container .list-group-item:hover
+{
+    background: #A3DB8C;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#A3DB8C, #FFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#A3DB8C, #FFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#A3DB8C,#FFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#A3DB8C, #FFF); /* Standard syntax */
+}
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    min-height: 500px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}

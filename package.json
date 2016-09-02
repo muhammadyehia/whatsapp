@@ -1,5 +1,5 @@
 {
-  "name": "angular2-quickstart",
+  "name": "whatsapp",
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
@@ -16,7 +16,9 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "webdriver:update": "webdriver-manager update"
+    "webdriver:update": "webdriver-manager update",
+    "build": "tsc && gulp",
+    "prod": "npm run build && cd build && npm i && node index.js"
   },
   "keywords": [],
   "author": "",
@@ -57,7 +59,10 @@
     "karma-htmlfile-reporter": "^0.2.2",
     "karma-jasmine": "^0.3.8",
     "protractor": "^3.3.0",
-    "rimraf": "^2.5.2"
+    "rimraf": "^2.5.2",
+    "gulp" : "3.9.1",
+    "gulp-sourcemaps": "2.0.0-alpha",
+    "del" : "2.2.0"
   },
   "repository": {}
 }

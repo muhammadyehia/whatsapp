@@ -1,0 +1,56 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-comment"></span> Chat
+                    </div>
+                    <div class="panel-body">
+                        <ul class="chat">
+                            <div *ngFor="let m of MyContactWithMessage.messages">
+                                <li *ngIf="m.contactId!==MyId" class="left clearfix">
+                                    <span class="chat-img pull-left">
+                            <img [src]="m.imageUrl" [alt]="m.contactName" [title]='m.contactName' class="img-circle">
+                               </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">{{m.contactName}}</strong>
+                                        </div>
+                                        <p>
+                                            {{m.message}}
+                                        </p>
+                                    </div>
+                                </li>
+                                <li *ngIf="m.contactId===MyId" class="right clearfix">
+                                    <span class="chat-img pull-right">
+                               <img [src]="m.imageUrl" [alt]="m.contactName" [title]='m.contactName' class="img-circle">
+                                </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="pull-right primary-font">{{m.contactName}}</strong>
+                                        </div>
+                                        <br />
+                                        <p>
+                                            {{m.message}}
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                           
+                        </ul>
+                         
+                    </div>
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input id="btn-input" type="text" autofocus class="form-control input-sm" name="message" (keyup.enter)="sendNewMessage()"  [(ngModel)]="newMessage" placeholder="Type your message here...">
+                            <span class="input-group-btn">
+                            <button class="btn btn-success btn-sm" id="btn-chat" type="submit" (click)="sendNewMessage()">
+                                Send</button>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
