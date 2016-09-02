@@ -60,6 +60,9 @@ Install the npm packages described in the `package.json` and verify that it work
 ```bash
 npm install
 npm start
+or
+gulp clean
+npm run build
 ```
 
 > If the `typings` folder doesn't show up after `npm install` please install them manually with:
