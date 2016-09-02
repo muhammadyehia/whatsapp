@@ -1,4 +1,4 @@
-import { Component, OnInit ,OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import {ContactComponent } from './contact.component'
 import { ContactService} from './contact.service'
 import { IContact} from './contact'
@@ -6,20 +6,20 @@ import { IContact} from './contact'
     moduleId: module.id,
     selector: 'app-contacts',
     templateUrl: 'contacts.component.html',
-    directives:[ContactComponent],
-    styleUrls:['contacts.component.css']
+    directives: [ContactComponent],
+    styleUrls: ['contacts.component.css']
 })
-export class ContactsComponent implements OnInit  {
+export class ContactsComponent implements OnInit {
 
-constructor(private _contactService:ContactService ) { 
-  
-}
-  Contacts:IContact[];
+    constructor(private _contactService: ContactService) {
 
-    ngOnInit() { 
-        if(!this._contactService.Contacts)
+    }
+    Contacts: IContact[];
+
+    ngOnInit() {
+               if(!this._contactService.Contacts)
         {
-		this._contactService.getContacts_RxObservable()
+		this._contactService.getContacts()
             .subscribe((contacts: IContact[]) => {
                 this.Contacts=contacts;
         }  ,(err) => {console.log(err);});
@@ -27,7 +27,7 @@ constructor(private _contactService:ContactService ) {
         else{
             this.Contacts=this._contactService.Contacts;
         }
-    }
-    
+        }
+
 
 }

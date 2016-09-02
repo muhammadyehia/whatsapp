@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Params, ActivatedRoute, Router } from '@angular/router';
-import { ContactService, IContactWithMessages, IMessage, IContact} from '../contact/index';
+import { ContactService, IContactWithMessages, IMessage, IContact, AddedMessages} from '../contact/index';
 @Component({
     moduleId: module.id,
     selector: 'app-chat',
@@ -8,17 +8,28 @@ import { ContactService, IContactWithMessages, IMessage, IContact} from '../cont
     styleUrls: ['chat.component.css']
 })
 export class ChatComponent implements OnInit {
-    Message: string;
+
+    private CurrentContactId: number;
+    newMessage: string;
     MyId: number;
     MyImage: string;
     MyName: string;
+
     MyContactWithMessage: ContactWithMessage;
+
     constructor(private route: ActivatedRoute, private _contactService: ContactService, private router: Router) {
 
         this.MyContactWithMessage = new ContactWithMessage();
         this.MyId = 0;
         this.MyImage = "http://placehold.it/50/FA6F57/fff&amp;text=ME";
         this.MyName = "Muhammad Yehia";
+    }
+    sendNewMessage() {
+        let addMessage: IMessage = { "contactId": this.MyId, "message": this.newMessage, "contactName": this.MyName, "imageUrl": this.MyImage };
+        this.MyContactWithMessage.messages.push(addMessage);
+        let newMessage: AddedMessages = { "contactId": this.CurrentContactId, "message": addMessage };
+        this._contactService.NewMessages.push(newMessage);
+        this.newMessage = "";
     }
     ngOnInit() {
         if (!this._contactService.Contacts) {
@@ -29,13 +40,14 @@ export class ChatComponent implements OnInit {
         this.route.params.forEach((params: Params) => {
             let id: number = +params['id'];
             if (id) {
-                this._contactService.getContactMessages_RxObservable(id).subscribe(
+                this.CurrentContactId = id;
+                this._contactService.getContactMessages(this.CurrentContactId).subscribe(
                     (myContact: IContactWithMessages) => {
                         this.MyContactWithMessage = myContact;
                         this.MyContactWithMessage.messages.map((value: IMessage) => {
                             let contact: IContact;
                             contact = this._contactService.Contacts.filter((item: IContact) => {
-                                return item.contactId === id;
+                                return item.contactId === this.CurrentContactId;
                             })[0];
                             if (contact.contactId === value.contactId) {
                                 value.imageUrl = contact.imageUrl;
@@ -50,6 +62,7 @@ export class ChatComponent implements OnInit {
             }
         });
     }
+ 
 }
 
 class ContactWithMessage implements IContactWithMessages {
